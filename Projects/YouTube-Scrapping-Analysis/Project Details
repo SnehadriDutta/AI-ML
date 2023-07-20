@@ -1,0 +1,19 @@
+Project Description: YouTube Video Views Prediction Using YouTube API and Multimodal Deep Learning Models
+
+Introduction:
+The aim of this project is to accurately predict the number of views a particular YouTube video can achieve. To accomplish this, the YouTube API was used to extract video details from multiple channels. The extracted information includes the channel's subscriber count, video title, thumbnail image, and statistics of previously uploaded videos such as the number of likes and comments. By combining textual, image, and numerical data, a multimodal deep learning approach was employed to predict the video views.
+
+Methodology:
+
+Data Extraction: The YouTube API wass utilized to gather relevant information from multiple channels. This includes accessing the channel's subscriber count, video title, thumbnail image, and statistical data of previously uploaded videos.
+
+Data Preprocessing: The extracted data was preprocessed to prepare it for input to the deep learning models. Textual data, such as video titles, undergoes tokenization and padding to convert them into numerical representations. Images are resized and normalized to a consistent format for further processing. Numerical data, such as the number of likes and comments, is scaled to ensure compatibility with the models.
+
+Multimodal Deep Learning Models:
+a. LSTM (Long Short-Term Memory) Model: The textual data, represented as tokenized sequences, is fed into an LSTM model. LSTM is a recurrent neural network architecture that can capture sequential patterns and dependencies in the text. The model learns to extract relevant information from video titles and encode it into a numerical representation.
+
+b. CNN (Convolutional Neural Network) Model: The thumbnail images are processed using a CNN model. CNNs are effective in extracting spatial features from images. By employing convolutional and pooling layers, the model learns to identify patterns and distinctive visual cues in the thumbnails, capturing the visual appeal of the video.
+
+c. Dense Model: The numerical data, including the channel's subscriber count and statistics of previously uploaded videos, is input to a dense neural network model. Dense layers are fully connected layers that can learn complex relationships between the input features and the target variable (number of views). The model learns to extract meaningful insights from the numerical data.
+
+Fusion and Prediction: The outputs of the LSTM, CNN, and Dense models are combined by passing them through another dense layer. This fusion layer integrates the learned representations from the different modalities and performs further processing to predict the final output, which is the number of views the video is expected to achieve.
